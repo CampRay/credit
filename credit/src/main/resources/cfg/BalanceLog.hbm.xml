@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+	<class name="com.jtc.credit.dto.TbalanceLog" table="balance_log">
+		<id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+		<property name="userId" type="java.lang.String">
+            <column name="user_id" length="100" not-null="true"/>
+        </property>		
+		<property name="amount" type="java.lang.Double">
+            <column name="amount" not-null="true"/>
+        </property>
+        <property name="balance" type="java.lang.Double">
+            <column name="balance" not-null="true"/>
+        </property>
+        
+		<property name="descr" type="java.lang.String">
+            <column name="descr" length="1000" not-null="false"/>
+        </property>	                                       
+        <property name="createdTime" type="java.lang.Long">
+            <column name="created_time" length="20" not-null="true"/>              
+        </property> 
+        <property name="type" type="java.lang.Boolean">
+            <column name="type"/>
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="status"/>
+        </property>
+                             
+	</class>
+</hibernate-mapping>

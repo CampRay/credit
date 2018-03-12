@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">	      
+
+	<bean class="com.jtc.credit.commons.MyApplicationContextUtil" lazy-init="false"></bean>
+	
+	<bean id="systemConfig" class="com.jtc.credit.commons.SystemConfig" lazy-init="true">
+		<property name="charSet" value="${char.set}"/>	
+		<property name="pfxName" value="${pfx.name}"/>	
+		<property name="pfxPwd" value="${pfx.pwd}"/>	
+		<property name="cerName" value="${cer.name}"/>	
+		<property name="terminalId" value="${terminal.id}"/>	
+		<property name="memberId" value="${member.id}"/>	
+		<property name="dataType" value="${data.type}"/>	
+		<property name="idCardAuthUrl" value="${id.card.auth.url}"/>	
+		<property name="bizAuthUrl" value="${biz.auth.url}"/>	
+		<property name="bankCardAuthUrl" value="${bank.card.auth.url}"/>	
+		<property name="eleUsername" value="${ele.webservice.username}"/>
+		<property name="elePassword" value="${ele.webservice.password}"/>	
+	</bean>
+	
+	<bean id="creditWebService" class="com.jtc.credit.service.CreditWebService" lazy-init="true"/>
+		
+	<bean id="adminUserService" class="com.jtc.credit.service.impl.AdminUserServiceImpl" autowire="byName"/>				
+	<bean id="adminInfoService" class="com.jtc.credit.service.impl.AdminInfoServiceImpl" autowire="byName"/>					
+	<bean id="systemSettingService" class="com.jtc.credit.service.impl.SystemSettingServiceImpl" autowire="byName"/>				
+	<bean id="apiPriceService" class="com.jtc.credit.service.impl.ApiPriceServiceImpl" autowire="byName"/>
+	<bean id="balanceLogService" class="com.jtc.credit.service.impl.BalanceLogServiceImpl" autowire="byName"/>
+	<bean id="queryLogService" class="com.jtc.credit.service.impl.QueryLogServiceImpl" autowire="byName"/>
+	
+	<!-- 缓存系统常用数据 -->
+	<bean class="com.jtc.credit.core.CachedDataProcessor"/>				
+</beans>

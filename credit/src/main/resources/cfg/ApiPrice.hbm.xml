@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 11:20:20 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.jtc.credit.dto.TapiPrice" table="api_price">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="groupName" type="java.lang.String">
+            <column name="group_name" length="100" not-null="true"/>
+        </property>
+        <property name="apiName" type="java.lang.String">
+            <column name="api_name" length="100" not-null="true" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price"  not-null="true" />
+        </property>
+        <property name="descr" type="java.lang.String">
+            <column name="descr" length="1000" />
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2017 11:20:20 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.jtc.credit.dto.TadminInfo" table="admin_info">
+        <id name="adminId" type="string">
+            <column name="admin_id" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="realName" type="string">
+            <column name="real_name" length="20" />
+        </property>
+        <property name="company" type="string">
+            <column name="company" length="100" />
+        </property>        
+        <property name="mobile" type="string">
+            <column name="mobile" length="20" />
+        </property>
+        <property name="position" type="string">
+            <column name="position" length="50" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="1000" />
+        </property>        
+    </class>
+</hibernate-mapping>

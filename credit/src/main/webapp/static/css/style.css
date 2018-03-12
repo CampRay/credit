@@ -1,0 +1,148 @@
+body{
+    background-color: #ebebeb;
+}
+
+input,select,option,button{
+	font-size:14px;
+} 
+select{
+	padding:3px;
+}
+
+.content{
+    padding: 70px 0 40px;    
+}
+.login-bg {
+    height: 300px;
+    background-color: #41beda;
+}
+.login-content {
+    margin-top: -150px;
+    padding-bottom: 50px;
+    z-index: 2000;
+}
+.login-title {
+    padding: 10px;
+}
+.login-left{
+    border-right:1px solid lightgrey;
+}
+.bookmark {
+    background: url(../images/bookmark.png) no-repeat 90% 0;
+}
+
+.reg-left{
+    border-right:1px solid lightgrey;
+}
+
+
+.right-content{
+    background-color: white;
+    padding: 10px 5px;
+}
+
+.left-title {
+	margin-top:10px;
+    display: table;
+    width: 100%;
+    height: 64px;
+    background: #55b3fb url(../images/search.png) no-repeat 5px 50%;
+    background-size: 50px;
+}
+.left-title .title-text{
+    line-height: 32px;
+    padding: 5px 0px 5px 66px;
+    font-size: 32px;
+    color:white;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.right-column{
+	border-left:1px solid #ededed;
+}
+
+.right-title{
+	margin-top:10px;
+    color:#F90;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-bottom: 1px dotted #ccc;
+}
+.search-content{
+    padding: 20px 5px;
+}
+.result-content{
+    padding: 0 20px 20px 20px;
+}
+
+.menu{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.menu .menu-item{
+    background-color: #343a40;
+    line-height: 30px;
+    height: 40px;
+    width: 100%;
+    color:white;
+    padding: 5px 10px ;
+    border-top: 1px solid #ebebeb;
+ }
+.menu .menu-item.active{
+    color:black;
+    background-color: #ededed;
+}
+.menu-icon-id{
+    padding-left: 40px;
+    background: url("../images/credit_id_hover.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+.menu-icon-heart{
+    padding-left: 40px;
+    background: url("../images/credit_heart_hover.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+.menu-icon-credit{
+    padding-left: 40px;
+    background: url("../images/credit_card_hover.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+.menu-icon-law{
+    padding-left: 40px;
+    background: url("../images/credit_law_hover.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+
+.menu-item.active .menu-icon-id{
+    background: url("../images/credit_id.png") no-repeat 0 50%;
+    background-size: 24px;
+ }
+.menu-item.active .menu-icon-heart{
+    background: url("../images/credit_heart.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+.menu-item.active .menu-icon-credit{
+    background: url("../images/credit_card.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+.menu-item.active .menu-icon-law{
+    background: url("../images/credit_law.png") no-repeat 0 50%;
+    background-size: 24px;
+}
+
+@media (max-width: 768px){
+	.right-column{
+		border-left:0;
+	}
+	.bookmark{
+        background: none;
+    }
+    .login-left{
+        border-right: none;
+    }
+    .reg-left{
+    	border-right: none;
+    }
+}
+
