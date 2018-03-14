@@ -307,10 +307,10 @@
 									</div>
 								</div>								
 								<div class="form-group">
-									<label class="control-label col-md-3">充值金額<span class="required"> * </span></label>
+									<label class="control-label col-md-3">金額(HK$)</label>
 									<div class="col-md-9">										
-										<input id="addMoneyAmount" name="balance" class="form-control"/>										
-									</div>
+										<input id="addMoneyAmount" name="balance" class="form-control"/>									
+									</div>									
 								</div>													
 								
 							</div>

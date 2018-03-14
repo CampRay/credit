@@ -42,9 +42,13 @@ var ReportTable = function () {
             },
             "columns": [               
 	           {data: "userId"  },
-	           {data: "amount" },
-	           {data: "createdTimeStr",defaultContent:""},
-	           {data: "balance" },
+	           {'render':function(data,status,row){
+	   				return 'HK$ '+row.amount;		
+				}},	
+	           {data: "createdTimeStr",defaultContent:""},	           
+	           {'render':function(data,status,row){	   				
+	   				return 'HK$ '+row.balance;					
+				}},	
 	           {data: "descr",defaultContent:"" },
 	           {'render':function(data,status,row){
 	   				var tem = row.type;

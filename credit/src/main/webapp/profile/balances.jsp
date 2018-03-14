@@ -93,7 +93,7 @@
                         <div class="search-content">
                             <form id="addForm" action="addMoney" method="post" enctype="multipart/form-data">                             	                              	                    	                     
                                 <div class="form-group form-inline">
-                                    <div class="col-lg-3 col-md-4 text-md-right">充值金额：<span class="text-danger">*</span></div>
+                                    <div class="col-lg-3 col-md-4 text-md-right">充值金额(HK$)：<span class="text-danger">*</span></div>
                                     <div class="col-lg-9 col-md-8">
                                         <input id="amount" type="text" class="w-100 p-1" name="amount"/>  
                                         <span class="text-danger" id="amount_error"></span>                                
@@ -135,9 +135,9 @@
                             		<thead>
                             			<tr>
                             				<td width="20%">充值日期</td>
-                            				<td width="15%">充值金额</td>
-                            				<td width="15%">账户余额</td>                            				
-                            				<td width="35%">充值说明</td>
+                            				<td width="20%">充值金额</td>
+                            				<td width="20%">账户余额</td>                            				
+                            				<td width="25%">充值说明</td>
                             				<td width="15%">记录类型</td>                                				                        				
                             			</tr>
                             		</thead>
@@ -145,8 +145,8 @@
                             			<c:forEach items="${logList}" var="item">
                             			<tr>
                             				<td>${item.createdTimeStr}</td>
-                            				<td>${item.amount}</td>
-                            				<td>${item.balance}</td>
+                            				<td>HK$ ${item.amount}</td>
+                            				<td>HK$ ${item.balance}</td>
                             				<td>${item.descr}</td> 
                             				<td><c:if test="${item.type}">申请充值</c:if><c:if test="!${item.type}">实际充值</c:if></td> 
                             			</tr>

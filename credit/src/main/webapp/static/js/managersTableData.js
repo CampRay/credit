@@ -47,8 +47,12 @@ var ManagersTable = function () {
                },
 	           {data: "adminId"  },
 	           {data: "email" },
-	           {data: "createdTimeStr",defaultContent:""},
-	           {data: "balance" },
+	           {data: "createdTimeStr",defaultContent:""},	           
+	           {'render':function(data,status,row){
+	   				var tem = row.balance;
+	   				var str='HK$ '+tem
+					return str;
+				}},	
 	           {'render':function(data,status,row){
 	        				var tem = row.status;
 	        				var str = '';

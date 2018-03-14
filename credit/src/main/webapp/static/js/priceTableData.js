@@ -44,7 +44,11 @@ var PriceTable = function () {
 	           {data: "groupName" },
 	           {data: "apiName"},
 	           {data: "descr" },
-	           {data: "price" },	           
+	           {'render':function(data,status,row){
+	   				var tem = row.price;
+	   				var str='<div>HK$ '+tem+'</div>'
+					return str;
+				}},		           
 	           {'render':function(data,status,row){
 	   				var tem = row.adminId;
 	   				var str='<div class="text-center"><button class="btn btn-sm blue" data-toggle="modal"  href="#edit_price">修改价格</button></div>'

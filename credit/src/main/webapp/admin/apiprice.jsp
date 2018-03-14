@@ -125,7 +125,7 @@
 									</div>
 								</div>								
 								<div class="form-group">
-									<label class="control-label col-md-3">价格<span class="required"> * </span></label>
+									<label class="control-label col-md-3">价格(HK$)<span class="required"> * </span></label>
 									<div class="col-md-9">										
 										<input type="text" id="price" name="price" class="form-control"/>										
 									</div>

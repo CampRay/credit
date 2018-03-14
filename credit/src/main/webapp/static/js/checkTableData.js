@@ -40,14 +40,16 @@ var CheckTable = function () {
                 "sInfoEmpty":"查询数据为空",
             },
             "columns": [               
-	           {data: "userId"  },
-	           {data: "amount" },
+	           {data: "userId"  },	           
+	           {'render':function(data,status,row){
+	        	   return 'HK$ '+row.amount;
+				}},	
 	           {data: "createdTimeStr",defaultContent:""},	           
 	           {data: "descr",defaultContent:"" },
 	           {'render':function(data,status,row){
 	   				var rid = row.id;
 	   				var rtime = row.createdTime;
-	   				var str='<a data-toggle="modal" href="#open_img"><img width="100" src="'+'upload/'+rid+rtime+'.jpg" onerror="this.src=\'\'"/></a>';	   				
+	   				var str='<a data-toggle="modal" href="#open_img"><img width="100" src="'+'upload/'+rid+rtime+'.jpg" onerror="$(this).remove();"/></a>';	   				
 					return str;
 				}
 	           },

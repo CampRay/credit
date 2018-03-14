@@ -122,19 +122,30 @@
                             			<tr>
                             				<td width="20%">查询日期</td>
                             				<td width="20%">查询接口</td>
-                            				<td width="15%">查询金额</td>
-                            				<td width="15%">账户余额</td>
-                            				<td width="30%">查询说明</td>                            				
+                            				<td width="20%">查询金额</td>
+                            				<td width="20%">账户余额</td>
+                            				<td width="20%">查询说明</td>                            				
                             			</tr>
                             		</thead>
                             		<tbody>
                             			<c:forEach items="${logList}" var="item">
                             			<tr>
                             				<td width="20%">${item.createdTimeStr}</td>
-                            				<td width="20%">${item.apiId}</td>
-                            				<td width="15%">${item.amount}</td>
-                            				<td width="15%">${item.balance}</td>
-                            				<td width="50%">${item.descr}</td> 
+                            				<td width="20%">                            				
+                            				<c:if test="${item.apiId==1}">身份证认证(新颜)</c:if>
+                            				<c:if test="${item.apiId==2}">诚信信息核查(新颜)</c:if>
+                            				<c:if test="${item.apiId==3}">银行卡信息二元素认证(新颜)</c:if>
+                            				<c:if test="${item.apiId==4}">银行卡信息三元素认证(新颜)</c:if>
+                            				<c:if test="${item.apiId==5}">银行卡信息四元素认证(新颜)</c:if>
+                            				<c:if test="${item.apiId==6}">身份证认证(元素)</c:if>
+                            				<c:if test="${item.apiId==7}">风险控制核查(元素)</c:if>
+                            				<c:if test="${item.apiId==8}">银行卡信息三元素认证(元素)</c:if>
+                            				<c:if test="${item.apiId==9}">银行卡信息四元素认证(元素)</c:if>
+                            				<c:if test="${item.apiId==10}">工商信息查询(元素)</c:if>
+                            				</td>
+                            				<td width="20%">HK$ ${item.amount}</td>
+                            				<td width="20%">HK$ ${item.balance}</td>
+                            				<td width="20%">${item.descr}</td> 
                             			</tr>
                             			</c:forEach>
                             		</tbody>

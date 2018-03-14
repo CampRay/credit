@@ -69,7 +69,7 @@
 							<i class="fa fa-money"></i>
 						</div>
 						<div class="details">
-							<div class="number">${totalAmount}</div>
+							<div class="number">HK$ ${totalAmount}</div>
 							<div class="desc">已充值总金额</div>							
 						</div>
 						<a class="more" href="<%=request.getContextPath()%>/admin/balanceReport">更多 <i class="m-icon-swapright m-icon-white"></i>
@@ -82,7 +82,7 @@
 							<i class="fa fa-bar-chart-o"></i>
 						</div>
 						<div class="details">
-							<div class="number">${totalQueryAmount}</div>
+							<div class="number">HK$ ${totalQueryAmount}</div>
 							<div class="desc">征信查询总收入</div>	
 						</div>
 						<a class="more" href="<%=request.getContextPath()%>/admin/queryReport">更多<i class="m-icon-swapright m-icon-white"></i>
@@ -116,11 +116,11 @@
 									</tr>
 									<tr>
 										<td style="width: 50%">当月充值总金额</td>
-										<td style="width: 50%">${monthAmount}</td>
+										<td style="width: 50%">HK$ ${monthAmount}</td>
 									</tr>	
 									<tr>
 										<td style="width: 50%">当月征信查询总金额</td>
-										<td style="width: 50%">${monthQueryAmount}</td>
+										<td style="width: 50%">HK$ ${monthQueryAmount}</td>
 									</tr>
 									<tr>
 										<td style="width: 50%">当月征信查询总次数</td>

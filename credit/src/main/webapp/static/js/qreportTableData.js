@@ -70,7 +70,9 @@ var ReportTable = function () {
                	  }
 	           },	           
 	           {data: "createdTimeStr",defaultContent:""},
-	           {data: "amount" },
+	           {'render':function(data,status,row){
+	        	   return 'HK$ '+row.amount;
+				}},	
 	           {data: "descr",defaultContent:"" }
 	           
 	        ],
